@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="title">
+        <h1>Recipe Book</h1>
+        <img src="../server/images/converted_image-removebg.png" id="rat-image">
+    </section>
+    <hr>
+    <br>
+
+    <div id="sign-up-container">
+        <form id="sign-up-form">
+            <input type="text" id="input-first-name" placeholder="First Name" required>
+            <input type="text" id="input-last-name" placeholder="Last Name" required>
+            <input type="text" id="input-email" placeholder="Email" required>
+            <input type="password" id="input-password" placeholder="Password" required>
+            <input type="submit" id ="submit-sign-up" placeholder="Create Account">
+        </form>
+    </div>
+    <br>
+    <div class="recipe-box-container">
+        <button type="button" id="add-new-recipe-button">New Recipe</button>
+        <section id="recipe-container" class="recipe-box">
+            <!-- Recipe cards will be added here -->
+        </section>
+    </div>
+
+    <div id="edit-recipe-form" style="display: none;">
+        <form id="edit-recipe-formed">
+            <h2>Edit Recipe</h2>
+            <input type="text" id="edit-recipe-name" placeholder="Recipe Name" required>
+            
+            <section id="edit-ingredient-container">
+                    
+            </section>
+            <button type="button" id="add-edit-ingredient">+</button>
+            <input type="number" id="edit-recipe-calories" placeholder="Calories" required>
+            <input id="edit-recipe-size" placeholder="Serving Size" required>
+            <input id="edit-recipe-time" placeholder="Cook Time" required>
+            <textarea id="edit-recipe-comment" placeholder="Add comments"></textarea>
+            
+            <div class="recipe-button-container">
+                <button type="button" class="add-recipe-buttons" id="save-recipe-button">Save</button>
+                <button type="button" class="cancel-add-recipe-buttons" id="cancel-edit-recipe">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <div id="add-recipe-content" style="display: none;">
+        <h2>Add New Recipe!</h2>
+        <hr>
+        <form id="recipe-form">
+            <input type="text" id="input-recipe-name" placeholder="Recipe Name" required>
+            <section id="add-ingredient-container">
+                <input type="text" class="ingredient-input" placeholder="Add Ingredient" required>
+                <button type="button" id="add-new-ingredient">+</button>
+            </section>
+            <input type="number" id="input-calories" placeholder="Calories" required>
+            <input type="text" id="input-size" placeholder="Serving Size" required>
+            <input type="text" id="time" placeholder="Cook Time" required>
+            <textarea id="comment" placeholder="Add comments"></textarea>
+            <div class="recipe-button-container">
+                <input type="submit" class="add-recipe-buttons" id="add-recipe-button" value="Add Recipe">
+                <input type="button" class="cancel-add-recipe-buttons" id="cancel-add-recipe-button" value="Cancel">
+            </div>
+        </form>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
